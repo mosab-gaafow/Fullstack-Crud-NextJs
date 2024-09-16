@@ -17,6 +17,7 @@ const RegisterProduct = () => {
         const res = await fetch("/api/category");
         const data = await res.json();
 
+        
         // console.log("Fetched categories:", data); // Log the entire response for inspection
 
         // Access the message array and set it as categories
@@ -37,11 +38,12 @@ const RegisterProduct = () => {
     e.preventDefault();
 
     try {
-      const registerProduct = await fetch("http://localhost:3000/api/product", {
+      const registerProduct = await fetch("/api/product", {
         method: "POST",
 
         body: JSON.stringify({ name, description, price, categoryId }),
       });
+      
 
       if (!registerProduct.ok) {
         throw new Error("Failed to register product");
