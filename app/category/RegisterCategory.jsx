@@ -10,10 +10,16 @@ const RegisterCategory = () => {
 
         e.preventDefault();
 
-        const registerCategory = await fetch('http://localhost:3000/api/category', {
-            method: 'POST',
-            body: JSON.stringify({name: name})
-        });
+        // const registerCategory = await fetch('http://localhost:3000/api/category', {
+        //     method: 'POST',
+        //     body: JSON.stringify({name: name})
+        // });
+
+        const registerCategory = await fetch('/api/category', {
+          method: 'POST',
+          body: JSON.stringify({name: name})
+      });
+      
 
         alert("Registered Successful✅");
 
