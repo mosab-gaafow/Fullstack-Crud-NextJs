@@ -14,7 +14,7 @@ const RegisterProduct = () => {
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const res = await fetch("http://localhost:3000/api/category");
+        const res = await fetch("/api/category");
         const data = await res.json();
 
         // console.log("Fetched categories:", data); // Log the entire response for inspection

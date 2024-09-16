@@ -7,7 +7,7 @@ const GetProductList = () => {
     useEffect(() => {
         const fetchProducts = async () => {
             try {
-                const res = await fetch('http://localhost:3000/api/product');
+                const res = await fetch('/api/product');
                 const data = await res.json();
     
                 if (Array.isArray(data)) { // Expecting array directly
